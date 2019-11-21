@@ -1,11 +1,8 @@
 package utils;
 
 import com.github.webdriverextensions.WebComponent;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import java.util.List;
 
 public class Combo extends WebComponent {
     private Select select;
