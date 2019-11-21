@@ -1,6 +1,5 @@
 package tests;
 
-import lombok.Getter;
 import utils.Browsers;
 import utils.URLs;
 import utils.WebBrowsers;
@@ -8,10 +7,10 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-@Getter
+
 public class BaseTest {
 
-    private WebDriver driver;
+    public WebDriver driver;
 
     @BeforeMethod
     public void setUp(){
