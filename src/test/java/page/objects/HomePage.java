@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+
 public class HomePage extends BasePage {
     private static final String MENUBAR_ID = "menubar";
     @FindBy(how = How.ID, using = MENUBAR_ID)
@@ -15,6 +16,8 @@ public class HomePage extends BasePage {
     private WebElement headerImage;
     @FindBy(how = How.XPATH, using = "(//a[contains(text(),'Support')])[1]")
     private WebElement supportButton;
+    @FindBy(how = How.XPATH, using = "(//a[contains(text(),'Blog')])[1]")
+    private WebElement blogButton;
 
     public HomePage(WebDriver webDriver) {
         super(webDriver, ExpectedConditions.visibilityOfElementLocated(By.id(MENUBAR_ID)));
@@ -34,5 +37,9 @@ public class HomePage extends BasePage {
         return new SupportPage(driver);
     }
 
+    public BlogPage goToBlogPage() {
+        blogButton.click();
 
+        return new BlogPage(driver);
+    }
 }
