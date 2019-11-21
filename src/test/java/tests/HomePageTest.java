@@ -32,4 +32,14 @@ public class HomePageTest extends BaseTest {
 
         Assert.assertTrue(new BlogPage(driver).isArticleDisplayed());
     }
+
+    @Test(description = "Go to switch page")
+    public void goToSwitchPage() {
+        new HomePage(driver)
+                .goToSwitchPage();
+
+        Assert.assertTrue(new SwitchPage(driver).isFirstStepDisplayed());
+        Assert.assertTrue(new SwitchPage(driver).isSecondStepDisplayed());
+        Assert.assertTrue(new SwitchPage(driver).isThirdStepDisplayed());
+    }
 }

@@ -18,6 +18,8 @@ public class HomePage extends BasePage {
     private WebElement supportButton;
     @FindBy(how = How.XPATH, using = "(//a[contains(text(),'Blog')])[1]")
     private WebElement blogButton;
+    @FindBy(how = How.XPATH, using = "(//a[contains(text(),'Switch')])[1]")
+    private WebElement switchButton;
 
     public HomePage(WebDriver webDriver) {
         super(webDriver, ExpectedConditions.visibilityOfElementLocated(By.id(MENUBAR_ID)));
@@ -41,5 +43,11 @@ public class HomePage extends BasePage {
         blogButton.click();
 
         return new BlogPage(driver);
+    }
+
+    public SwitchPage goToSwitchPage() {
+        switchButton.click();
+
+        return new SwitchPage(driver);
     }
 }
