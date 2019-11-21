@@ -20,6 +20,8 @@ public class HomePage extends BasePage {
     private WebElement blogButton;
     @FindBy(how = How.XPATH, using = "(//a[contains(text(),'Switch')])[1]")
     private WebElement switchButton;
+    @FindBy(how = How.CSS, using = ".wunderlist-login-button")
+    private WebElement signInButton;
 
     public HomePage(WebDriver webDriver) {
         super(webDriver, ExpectedConditions.visibilityOfElementLocated(By.id(MENUBAR_ID)));
@@ -49,5 +51,11 @@ public class HomePage extends BasePage {
         switchButton.click();
 
         return new SwitchPage(driver);
+    }
+
+    public SignInPage goToSignInPage() {
+        signInButton.click();
+
+        return new SignInPage(driver);
     }
 }

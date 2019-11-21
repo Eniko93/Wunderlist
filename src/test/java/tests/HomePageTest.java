@@ -2,10 +2,7 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import page.objects.BlogPage;
-import page.objects.HomePage;
-import page.objects.SupportPage;
-import page.objects.SwitchPage;
+import page.objects.*;
 
 public class HomePageTest extends BaseTest {
 
@@ -41,5 +38,14 @@ public class HomePageTest extends BaseTest {
         Assert.assertTrue(new SwitchPage(driver).isFirstStepDisplayed());
         Assert.assertTrue(new SwitchPage(driver).isSecondStepDisplayed());
         Assert.assertTrue(new SwitchPage(driver).isThirdStepDisplayed());
+    }
+
+    @Test(description = "Go to sign in page")
+    public void goToSignInPage() {
+        new HomePage(driver)
+                .goToSignInPage();
+
+        Assert.assertTrue(new SignInPage(driver).isEmailFieldDisplayed());
+        Assert.assertTrue(new SignInPage(driver).isPasswordFieldDisplayed());
     }
 }
