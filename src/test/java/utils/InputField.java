@@ -10,4 +10,10 @@ public class InputField extends WebComponent {
         getWrappedWebElement().clear();
         getWrappedWebElement().sendKeys(text);
     }
+
+    public boolean isValid(WebDriver driver) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+
+        return (boolean) js.executeScript("return arguments[0].checkValidity();", this.getWrappedWebElement());
+    }
 }

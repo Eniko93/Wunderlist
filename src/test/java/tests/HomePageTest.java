@@ -4,6 +4,16 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import page.objects.*;
 
+/**
+ * This test class includes the following test scenarios:
+ * <p>
+ * Go to wunderlist home page
+ * Go to support page
+ * Go to blog page
+ * Go to switch page
+ * Go to sign in page
+ */
+
 public class HomePageTest extends BaseTest {
 
     @Test(description = "Go to wunderlist home page")

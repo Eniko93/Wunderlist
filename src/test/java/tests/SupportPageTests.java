@@ -5,6 +5,14 @@ import org.testng.annotations.Test;
 import page.objects.HomePage;
 import page.objects.SupportPage;
 
+/**
+ * This test class includes the following test scenarios:
+ * <p>
+ * Invalid search
+ * Valid search
+ * Select language
+ */
+
 public class SupportPageTests extends BaseTest {
     @Test(description = "Invalid search")
     public void invalidSearch() {
@@ -23,7 +31,7 @@ public class SupportPageTests extends BaseTest {
                 .search("wunderlist")
                 .submit();
 
-        Assert.assertEquals(new SupportPage(driver).getHeaderText(), "691 results found for \"wunderlist\"");
+        Assert.assertEquals(new SupportPage(driver).getHeaderText(), "692 results found for \"wunderlist\"");
     }
 
     @Test(description = "Select language")
