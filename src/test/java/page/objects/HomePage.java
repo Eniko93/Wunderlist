@@ -9,11 +9,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 
 public class HomePage extends BasePage {
-    private static final String MENUBAR_ID = "menubar";
-    @FindBy(how = How.ID, using = MENUBAR_ID)
+    private static final String MENUBAR = ".wunderlist-menubar";
+    @FindBy(how = How.CSS, using = MENUBAR)
     private WebElement menuBar;
     @FindBy(how = How.CSS, using = "img[class*='header-image']")
     private WebElement headerImage;
+    @FindBy(how = How.CSS, using = "img.header-image")
+    private WebElement header;
     @FindBy(how = How.XPATH, using = "(//a[contains(text(),'Support')])[1]")
     private WebElement supportButton;
     @FindBy(how = How.XPATH, using = "(//a[contains(text(),'Blog')])[1]")
@@ -24,7 +26,7 @@ public class HomePage extends BasePage {
     private WebElement signInButton;
 
     public HomePage(WebDriver webDriver) {
-        super(webDriver, ExpectedConditions.visibilityOfElementLocated(By.id(MENUBAR_ID)));
+        super(webDriver, ExpectedConditions.visibilityOfElementLocated(By.cssSelector(MENUBAR)));
     }
 
     public boolean isMenuBarDisplayed() {

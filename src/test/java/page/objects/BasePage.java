@@ -19,7 +19,7 @@ public class BasePage {
     }
 
     protected <V> void waitUntil(Function<? super WebDriver, V> isTrue) {
-        WebDriverWait wait = new WebDriverWait(driver, 30);
+        WebDriverWait wait = new WebDriverWait(driver, 10);
 
         wait.until(isTrue);
     }
