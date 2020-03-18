@@ -15,7 +15,7 @@
         <selenium.version>3.8.1</selenium.version>
         <testng.version>6.13.1</testng.version>
         <htmlunit.version>2.29.0</htmlunit.version>
-        <jackson.databind.version>2.8.1</jackson.databind.version>
+        <jackson.databind.version>2.9.10.3</jackson.databind.version>
         <apache.poi.version>3.14</apache.poi.version>
         <webdriverextensions.version>3.10.0</webdriverextensions.version>
         <allure.testng.version>2.12.1</allure.testng.version>
