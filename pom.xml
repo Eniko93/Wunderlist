@@ -16,7 +16,7 @@
         <testng.version>6.13.1</testng.version>
         <htmlunit.version>2.29.0</htmlunit.version>
         <jackson.databind.version>2.9.10.3</jackson.databind.version>
-        <apache.poi.version>3.14</apache.poi.version>
+        <apache.poi.version>4.1.2</apache.poi.version>
         <webdriverextensions.version>3.10.0</webdriverextensions.version>
         <allure.testng.version>2.12.1</allure.testng.version>
         <lombok.version>1.18.8</lombok.version>
